@@ -186,10 +186,25 @@ header .header-content .header-content-inner p {
 	}
 }
 .section-heading {
-	margin-top:0;
+	margin-top:30px;
 	line-height:1.4;
-	font-size:34px;
-	 color:#111;
+	font-size:20px;
+	color:#111;
+	font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;
+	font-weight: 700;
+}
+
+.about-places a:hover > .section-heading {
+	color: #999;  
+}
+.about-places a:hover > .section-places {
+	color: #111;  
+}
+.section-places {
+	margin-top: -5px;
+	font-size: 16px;
+	color: #999;
+	font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;
 }
 .service-box {
 	margin:50px auto 0;
@@ -387,19 +402,20 @@ body {
 	font-family:"Mrs Sheppards";
 }
 .carousel-caption h2 {
-	font-size:16px;
+	font-size:18px;
 	letter-spacing:1px;	
-	line-height: 20px;
-	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	line-height: 25px;
+	font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;
 	margin-bottom: 70px;
 }
 .carousel-caption a {
 	text-decoration: none;
 	padding: 10px;
-	font-size:17px;
+	font-size:18px;
 	letter-spacing:1px;
 	color: white;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;
 }
 .carousel-caption span {
 	position: relative;
@@ -1084,6 +1100,9 @@ input.error,textarea.error {
 	.section-heading {
 		font-size:30px;
 	}
+	.section-places {
+		font-size:16px;
+	}
 	#quote-carousel .carousel-indicators .active {
 		width:80px;
 		height:80px;
@@ -1092,4 +1111,7 @@ input.error,textarea.error {
 		padding:0 10px 10px 10px;
 		margin-top: 30px;
 	}
+}
+.left {
+	text-align: left;	
 }

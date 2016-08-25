@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.easing.min
 //= require turbolinks
+//= require twitter/bootstrap
+//= require parallax
+//= require contact
+//= require countto
+//= require wow.min
+//= require common
 //= require_tree .

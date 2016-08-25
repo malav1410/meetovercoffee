@@ -346,7 +346,7 @@ body {
 	 top:30%;
 }
 .web-logo {
-	top:15%;
+	top:10%;
 }
 .main-container {
 	padding:40px 15px;
@@ -387,10 +387,23 @@ body {
 	font-family:"Mrs Sheppards";
 }
 .carousel-caption h2 {
-	font-size:30px;
+	font-size:16px;
+	letter-spacing:1px;	
+	line-height: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 70px;
+}
+.carousel-caption a {
+	text-decoration: none;
+	padding: 10px;
+	font-size:17px;
 	letter-spacing:1px;
-	font-weight:300;
-	font-family:"Mrs Sheppards";
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+}
+.carousel-caption span {
+	position: relative;
+    bottom: 5px;
 }
 .carousel .icon-container {
 	display:inline-block;

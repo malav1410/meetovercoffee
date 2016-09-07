@@ -51,3 +51,4 @@ end
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 gem "font-awesome-rails"
 gem "animate-rails"
+gem 'bootstrap_form'

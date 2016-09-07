@@ -481,6 +481,10 @@ body {
 	border-color:#00bfff;
 	margin-top: 1em;
 }
+/* Modal styles*/
+.mod-title {
+	text-align: center;
+}
 /* Animation delays */
 .carousel-caption h3:first-child {
 	-webkit-animation-delay:1s;

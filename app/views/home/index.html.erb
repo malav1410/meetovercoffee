@@ -11,7 +11,7 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 					<h2 style="color: black" data-animation="animated bounceInDown"><b>
 					A collection of coffee shops with that unicorn combination of good coffee, good Wi-Fi and plugs. All on your phone.
 					(Wi-Fi passwords included)</b></h2>					
-					<a href="#" class="" data-animation="animated fadeInLeft"><b>Recommend a place</b></a><span> . </span>
+					<a href="#" class="" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#recommendModal"><b>Recommend a place</b></a><span> . </span>
 					<a href="#" class="" data-animation="animated fadeInRight"><b>Subscribe for updates</b></a><span> . </span>
 					<a href="#" class="" data-animation="animated fadeInRight"><b>Thank you</b></a>
 					<br/>
@@ -22,6 +22,57 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 		<!-- /.item -->
 	</div>	
 </div>
+<!-- Modal -->
+<div id="recommendModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title mod-title"><b>Recommend a place</b></h4>
+      </div>
+      <div class="modal-body">
+        <form accept-charset="UTF-8" action="/recommendation" class="new_recommendation" id="new_recommendation" method="post">
+		  <div class="form-group">
+		    <label for="user_link" style="font-size: 13px;">Your any profile link (Facebook/Twitter)</label>
+		    <input class="form-control" id="user_link" name="recommendation[link]" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="email" style="font-size: 13px;">Email</label>
+		    <input class="form-control" id="email" name="recommendation[email]" type="email">
+		  </div>
+		  <div class="form-group">
+		    <label for="cafe_name" style="font-size: 13px;">Name of the coffee shop</label>
+		    <input class="form-control" id="cafe_name" name="recommendation[cafe_name]" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="city" style="font-size: 13px;">City?</label>
+		    <input class="form-control" id="city" name="recommendation[city]" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="cafe_link" style="font-size: 13px;">Link to the cafe (Foursquare / Google Maps)</label>
+		    <input class="form-control" id="cafe_link" name="recommendation[cafe_link]" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="wifi_password" style="font-size: 13px;">Wi-Fi password?</label>
+		    <input class="form-control" id="wifi_password" name="recommendation[wifi_password]" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="note" style="font-size: 13px;">Note</label>
+		    <input class="form-control" id="note" name="recommendation[note]" type="text">
+		  </div>		   
+		  <input class="btn btn-default" name="commit" type="submit" value="Submit">
+		  <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+		</form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+
+  </div>
+</div>		
 <!-- /.carousel -->
 
 <!-- Section About

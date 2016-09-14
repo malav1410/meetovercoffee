@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Heroku gem
+gem 'rails_12factor', group: :production
+
 group :assets do
   #gem 'jquery-smooth-scroll-rails'
   gem 'jquery-smooth-scroll-rails', :git => 'git@github.com:gretel/jquery-smooth-scroll-rails.git'

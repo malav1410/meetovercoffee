@@ -36,7 +36,7 @@ gem 'rails_12factor', group: :production
 
 group :assets do
   #gem 'jquery-smooth-scroll-rails'
-  gem 'jquery-smooth-scroll-rails', :git => 'git@github.com/gretel/jquery-smooth-scroll-rails.git'
+  gem 'jquery-smooth-scroll-rails', :github => 'gretel/jquery-smooth-scroll-rails'  
 end
 
 group :development, :test do

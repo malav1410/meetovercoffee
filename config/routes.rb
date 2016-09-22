@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post '/recommendation' => 'home#create_recommendation'
+  post '/subscribe' => 'home#add_subscription'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

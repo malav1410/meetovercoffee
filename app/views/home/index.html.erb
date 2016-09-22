@@ -11,11 +11,11 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 					<h2 style="color: black" data-animation="animated bounceInDown"><b>
 					A collection of coffee shops with that unicorn combination of good coffee, good Wi-Fi and plugs. All on your phone.
 					(Wi-Fi passwords included)</b></h2>					
-					<a href="#" class="" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#recommendModal"><b>Recommend a place</b></a><span> . </span>
-					<a href="#" class="" data-animation="animated fadeInRight"><b>Subscribe for updates</b></a><span> . </span>
-					<a href="#" class="" data-animation="animated fadeInRight"><b>Thank you</b></a>
+					<a href="#" class="notify-btn" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#recommendModal"><b>Recommend a place</b></a><span> . </span>
+					<a href="#" class="notify-btn" data-animation="animated fadeInRight" data-toggle="modal" data-target="#subscribeModal"><b>Subscribe for updates</b></a><span> . </span>
+					<a href="#" class="notify-btn" data-animation="animated fadeInRight"><b>Thank you</b></a>
 					<br/>
-					<a href="#" class="" data-animation="animated fadeInRight"><b>Made by Me</b></a>
+					<a href="#" class="notify-btn" data-animation="animated fadeInRight"><b>Made by Me</b></a>
 				</div>
 			</div>
 		</div>
@@ -27,7 +27,7 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content no-border-radius">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title mod-title"><b>Recommend a place</b></h4>
@@ -36,19 +36,19 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
         <form accept-charset="UTF-8" action="/recommendation" class="new_recommendation" id="new_recommendation" method="post">
 		  <div class="form-group">
 		    <label for="user_link" style="font-size: 13px;">Your any profile link (Facebook/Twitter)</label>
-		    <input class="form-control" id="user_link" name="recommendation[link]" type="text">
+		    <input class="form-control" id="user_link" name="recommendation[link]" type="text" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="email" style="font-size: 13px;">Email</label>
-		    <input class="form-control" id="email" name="recommendation[email]" type="email">
+		    <input class="form-control" id="email" name="recommendation[email]" type="email" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="cafe_name" style="font-size: 13px;">Name of the coffee shop</label>
-		    <input class="form-control" id="cafe_name" name="recommendation[cafe_name]" type="text">
+		    <input class="form-control" id="cafe_name" name="recommendation[cafe_name]" type="text" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="city" style="font-size: 13px;">City?</label>
-		    <input class="form-control" id="city" name="recommendation[city]" type="text">
+		    <input class="form-control" id="city" name="recommendation[city]" type="text" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="cafe_link" style="font-size: 13px;">Link to the cafe (Foursquare / Google Maps)</label>
@@ -62,13 +62,40 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 		    <label for="note" style="font-size: 13px;">Note</label>
 		    <input class="form-control" id="note" name="recommendation[note]" type="text">
 		  </div>		   
-		  <input class="btn btn-default" name="commit" type="submit" value="Submit">
-		  <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+		  <div class="form-group" style="text-align: center; font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;">
+		  	<a href="#" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></a>
+		  </div>	 
 		</form>
+      </div>      
+    </div>
+
+  </div>
+</div>
+<div id="subscribeModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content no-border-radius">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title mod-title"><b>Subscribe to Meet Over Coffee</b></h4>
+        <h5 class="modal-title mod-title">Enter your email below and we'll let you know when new coffee shops are added.</h5>
       </div>
-      <div class="modal-footer">
-        
-      </div>
+      <div class="modal-body">
+        <form accept-charset="UTF-8" action="/subscribe" class="new_recommendation" id="new_recommendation" method="post">
+		  <div class="form-group">
+		    <label for="user_link" style="font-size: 13px;">Your any profile link (Facebook/Twitter)</label>
+		    <input class="form-control" id="user_link" name="recommendation[link]" type="text" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="email" style="font-size: 13px;">Email</label>
+		    <input class="form-control" id="email" name="recommendation[email]" type="email" required>
+		  </div>
+		  <div class="form-group" style="text-align: center; font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;">
+		  	<a href="#" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></a>
+		  </div>		  		 
+		</form>
+      </div>      
     </div>
 
   </div>

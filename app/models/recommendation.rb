@@ -3,6 +3,6 @@ class Recommendation < ActiveRecord::Base
 
 	def send_email_to_recommender 
 		# Tell the UserMailer to send a welcome email after save
-        UserMailer.welcome_email(self).deliver_later
+        #UserMailer.welcome_email(self).deliver_later
 	end
 end

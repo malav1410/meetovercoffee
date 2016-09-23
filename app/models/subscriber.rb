@@ -3,6 +3,6 @@ class Subscriber < ActiveRecord::Base
 
 	def send_email_to_subscriber 
 		# Tell the UserMailer to send a welcome email after save
-        UserMailer.welcome_email(self).deliver_later
+        #UserMailer.subscriber_email(self).deliver_later
 	end
 end

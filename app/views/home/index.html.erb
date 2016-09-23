@@ -36,7 +36,7 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
         <form accept-charset="UTF-8" action="/recommendation" class="new_recommendation" id="new_recommendation" method="post">
 		  <div class="form-group">
 		    <label for="user_link" style="font-size: 13px;">Your any profile link (Facebook/Twitter)</label>
-		    <input class="form-control" id="user_link" name="recommendation[link]" type="text" required>
+		    <input class="form-control" id="user_link" name="recommendation[link]" type="text">
 		  </div>
 		  <div class="form-group">
 		    <label for="email" style="font-size: 13px;">Email</label>
@@ -63,7 +63,7 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 		    <input class="form-control" id="note" name="recommendation[note]" type="text">
 		  </div>		   
 		  <div class="form-group" style="text-align: center; font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;">
-		  	<a href="#" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></a>
+		  	<button type="submit" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></button>
 		  </div>	 
 		</form>
       </div>      
@@ -82,17 +82,13 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
         <h5 class="modal-title mod-title">Enter your email below and we'll let you know when new coffee shops are added.</h5>
       </div>
       <div class="modal-body">
-        <form accept-charset="UTF-8" action="/subscribe" class="new_recommendation" id="new_recommendation" method="post">
-		  <div class="form-group">
-		    <label for="user_link" style="font-size: 13px;">Your any profile link (Facebook/Twitter)</label>
-		    <input class="form-control" id="user_link" name="recommendation[link]" type="text" required>
-		  </div>
+        <form accept-charset="UTF-8" action="/subscribe" class="new_recommendation" id="new_recommendation" method="post">		  
 		  <div class="form-group">
 		    <label for="email" style="font-size: 13px;">Email</label>
-		    <input class="form-control" id="email" name="recommendation[email]" type="email" required>
+		    <input class="form-control" id="email" name="subscriber[email]" type="email" required>
 		  </div>
 		  <div class="form-group" style="text-align: center; font-family: 'Dosis','Helvetica Neue',Arial,sans-serif;">
-		  	<a href="#" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></a>
+		  	<button type="submit" class="btn btn-default hvr-float-shadow no-border-radius" style="background: #bc8650; color: white" ><b>SUBMIT</b></a>
 		  </div>		  		 
 		</form>
       </div>      
@@ -139,7 +135,7 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3 text-center">				
 				<div class="about-extra">
-					<b style="letter-spacing: 1px">Have a city you'd like to see on this list? All it takes is 5 coffee shops to unlock your favorite city.</b>
+					<b style="letter-spacing: 1px">Have a city you'd like to see on this list? All it takes is 5 coffee shops to </b><a class="unloack-link" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#recommendModal" style="text-decoration: none"><b>unlock your favorite city</b></a>
 				</div>
 				<div class="row city-list" style="margin-top: 30px">
 					<div class="col-lg-4 text-center" style="color:gray; text-decoration: line-through">Mumbai</div>
@@ -156,12 +152,9 @@ background: -webkit-linear-gradient(top,#bc8650 50%,#eee 100%); background: line
 					<div class="col-lg-4 text-center">Kolkata</div>
 					<div class="col-lg-4 text-center">Goa</div>					
 				</div>
-				<div class="row" style="margin-top: 30px">
-					<div class="col-lg-6 text-center">
-						<a href="#" class="ask-friend">Ask a friend</a>
-					</div>
-					<div class="col-lg-6 text-center">
-						<a href="#" class="ask-friend">Recommend a place</a>
+				<div class="row" style="margin-top: 30px">					
+					<div class="col-lg-12 text-center">
+						<a href="#" class="ask-friend unloack-link" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#recommendModal"><b>Recommend a place</b></a>						
 					</div>
 				</div>
 				<div class="about-extra">
